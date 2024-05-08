@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>css tables </details></title>
+</head>
+<style>
+    
+    #customer{
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    #customer th, #customer td{
+        height: 50px;
+        vertical-align: middle;
+        border: 5px solid #ddd;
+        padding: 8px;
+    }
+
+    #customer tr:nth-child(even){background-color: rgb(255, 63, 86);}
+    
+    #customer tr:hover {background-color: rgb(118, 118, 115);}
+    
+    #customer th{
+        padding-top: 12px;
+        padding-bottom: 10px;
+                font-size: 30px;
+                text-align: center;
+                background-color: rgb(146, 149, 254);
+        }
+
+    td
+    {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    div.static
+    {
+        position: static;
+        border: 5px solid black;
+    }
+
+    div.relative
+    {
+        position: relative;
+        left: 30px;
+        border: 5px solid blue;
+    }
+
+   div.fixed{
+    position: fixed;
+        bottom: 10px;
+        left: 20px;
+   } 
+   
+    div.sticky{
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        padding: 5px;
+        background-color: rgb(221, 183, 138);
+    }
+</style>
+<body>
+    <h1>CSS TABLE</h1>
+    <table id="customer">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td>ronaldo</td>
+            <td>ronaldo07@gmail.com</td>
+            <td>777777777</td>
+        </tr>
+        <tr>
+            <td>messi</td>
+            <td>messi10@gmail.com</td>
+            <td>1010101010</td>
+        </tr>
+        <tr>
+            <td>kohli</td>
+            <td>kohli18@gmail.com</td>
+            <td>1818181818</td>
+        </tr>
+        <tr>
+            <td>dhoni </td>
+            <td>thala@gmail.com</td>
+            <td>07070707</td>
+        </tr>
+        <tr>
+            <td>shrama</td>
+            <td>shrama45@gmail.com</td>
+            <td>45454545</td>
+        </tr>
+        <tr>
+            <td>sunil</td>
+            <td>chettri@gmail.com</td>
+            <td>11111111</td>
+        </tr>
+        <tr>
+            <td>modi</td>
+            <td>modi@gmail.com</td>
+            <td>8888888888</td>
+        </tr>
+        
+    </table>
+    <h2>static</h2>
+        <div class="static">this is example for static</div>
+
+        <h2>relative</h2>
+        <div class="relative">this is example for relative</div>
+
+        <h2>fixed</h2>
+        <div class="fixed">this is example for fixed</div>
+
+       
+        <h2>sticky</h2>
+        <div class="sticky">this is example for sticky</div>
+        <p style="font-size: 20px;">An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element. </p>
+</body>
+</html>
