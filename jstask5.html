@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Array Operations</h2>
+
+<button onclick="myFunction()">Perform Operations</button>
+
+<p id="demo"></p>
+
+<script>
+// Initialize an array named numbers with the following values: [10, 5, 8, 3, 12, 6].
+var numbers = [10, 5, 8, 3, 12, 6];
+
+// Function to perform various operations on the array
+function myFunction() {
+  // Print the length of the array to the console
+  console.log("Array length: " + numbers.length);
+
+  // Add the number 7 to the end of the array
+  numbers.push(7);
+  console.log("Added 7 to the array: " + numbers);
+
+  // Remove the first element of the array
+  numbers.shift();
+  console.log("Removed first element: " + numbers);
+
+  // Sort the array in ascending order
+  numbers.sort(function(a, b) {
+    return a - b;
+  });
+  console.log("Sorted array: " + numbers);
+
+  // Reverse the array
+  numbers.reverse();
+  console.log("Reversed array: " + numbers);
+
+  // Check if the number 8 exists in the array
+  if (numbers.includes(8)) {
+    console.log("Number 8 exists");
+  } else {
+    console.log("Number 8 doesn't exist");
+  }
+
+  // Find the index of the number 12 in the array and print it to the console
+  console.log("Index of 12: " + numbers.indexOf(12));
+
+  // Create a new array named doubledNumbers by doubling each number in the numbers array
+  var doubledNumbers = numbers.map(function(num) {
+    return num * 2;
+  });
+  console.log("Doubled numbers: " + doubledNumbers);
+
+  // Print the doubledNumbers array to the console
+  console.log("Doubled numbers array: " + doubledNumbers);
+
+  // Display the final arrays in the HTML document
+  document.getElementById("demo").innerHTML = "Final arrays: <br> Numbers: " + numbers.join(", ") + "<br> Doubled numbers: " + doubledNumbers.join(", ");
+}
+</script>
+
+</body>
+</html>
