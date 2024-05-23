@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Manipulating an Array of Names</h2>
+
+<button onclick="manipulateNames()">Manipulate Names</button>
+
+<p id="result"></p>
+
+<script>
+// Initialize an array named names
+let names = ["shashank", "shrusti", "vaibhav", "narendra", "adi"];
+
+// Function to manipulate the names array
+function manipulateNames() {
+  // Print all the names in the array to the console, each on a new line
+  console.log("Original Names:");
+  names.forEach(name => console.log(name));
+
+  // Add the name "shashank" to the end of the array
+  names.push("shashank");
+  console.log("After adding shashank:");
+  names.forEach(name => console.log(name));
+
+  // Remove the name "shrusti" from the array
+  let index = names.indexOf("shrusti");
+  if (index !== -1) {
+    names.splice(index, 1);
+  }
+  console.log("After removing shrusti:");
+  names.forEach(name => console.log(name));
+
+  // Sort the array in alphabetical order
+  names.sort();
+  console.log("After sorting:");
+  names.forEach(name => console.log(name));
+
+  // Check if the name "narendra" exists in the array
+  if (names.includes("narendra")) {
+    console.log("narendra is present");
+  } else {
+    console.log("narendra is not present");
+  }
+
+  // Convert all the names to uppercase and store them in a new array named uppercaseNames
+  let uppercaseNames = names.map(name => name.toUpperCase());
+  console.log("Uppercase Names:");
+  uppercaseNames.forEach(name => console.log(name));
+
+  // Print the result to the HTML page
+  document.getElementById("result").innerHTML = "Operation completed! Check the console for the results.";
+}
+</script>
+
+</body>
+</html>
