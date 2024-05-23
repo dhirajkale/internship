@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>String Analyzer</title>
+</head>
+<body>
+	<h1>String Analyzer</h1>
+	<form>
+		<label for="inputString">Enter a string:</label><br>
+		<input type="text" id="inputString" name="inputString" value="Hello, I love JavaScript!" required><br>
+		<button type="button" onclick="analyze()">Analyze</button>
+	</form>
+	<div id="result"></div>
+	<script>
+		function analyzeString(str) {
+		  const result = {};
+
+		  // 1. Calculate and return the length of the string
+		  result.length = str.length;
+
+		  // 2. Return the string converted to lowercase
+		  result.lowercase = str.toLowerCase();
+
+		  // 3. Return the string converted to uppercase
+		  result.uppercase = str.toUpperCase();
+
+		  // 4. Check if the string contains the word "JavaScript" (case insensitive)
+		  result.containsJavaScript = str.toLowerCase().includes("javascript");
+
+		  // 5. Count the number of occurrences of the letter 'a' (case insensitive)
+		  result.aCount = str.toLowerCase().split("a").length - 1;
+
+		  return result;
+		}
+
+		function analyze() {
+    const str = document.getElementById("inputString").value;
+    const result = analyzeString(str);
+    document.getElementById("result").innerHTML = JSON.stringify(result, null, 2);
+  }
+	</script>
+</body>
+</html>
