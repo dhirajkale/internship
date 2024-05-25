@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conditional and Looping Statements in HTML</title>
+</head>
+<body>
+  <h1>Conditional and Looping Statements in HTML</h1>
+  <p id="demo"></p>
+<button type="button" onclick="myfunc()">click here</button>
+  <script>
+    //if
+    function myfunc(){
+        let num=10;
+     } if(num>10){
+            console.log=("number is positive")
+     }
+     //if else
+     let num2=-5;
+     if(num2>0){
+        console.log=("number is positive")
+    } else{
+        console.log=("number is negative")
+    }
+    //switch
+    let day=monday
+    switch(day){
+        case"monday":
+        console.log(" today is monday")
+        break
+        case"tuesday":
+        console.log("today is tuesday")
+        break
+        default:
+            console.log("today is not monday or tuesday")
+    }
+  </script>
+  <script>
+     //for loop
+      function myfunc(){
+     for(let i=0;i<5;i++){
+    console.log(i)
+    }
+    // for in
+    const details={company :"ultimez", course:"js"}
+    for(const key in details){
+        console.log(key+ ":"+ details[key])
+    }
+    //for of
+    const colour=["red","green","blue"]
+    for(const eachcolour of colour){
+        console.log(eachcolour)
+    }
+    //while
+    let ;
+    while(count<5){
+        console.log(count)
+        count++
+}
+     //do while
+     let ;
+     do{
+        console.log(num)
+        num++
+      } while (num<5)
+    }
+    </script>
+
+</body>
+</html>
